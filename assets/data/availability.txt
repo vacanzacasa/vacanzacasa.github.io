@@ -1,0 +1,18 @@
+# File di configurazione disponibilità casa vacanze
+# Formato: Data inizio - Data fine (AAAA-MM-GG)
+# Una riga per ogni periodo occupato
+# Le righe con # all'inizio sono commenti
+
+# ISTRUZIONI: 
+# 1. Aggiungi i periodi di prenotazione nel formato sopra
+# 2. Ogni periodo deve essere su una riga separata
+# 3. Le righe che iniziano con # sono commenti e non vengono considerate
+# 4. Se non ci sono prenotazioni, lascia il file vuoto (tranne i commenti)
+# 5. Leggi AVAILABILITY_GUIDE.md per istruzioni dettagliate
+
+# ESEMPI (DA MODIFICARE):
+# 2026-02-15 - 2026-02-20
+# 2026-03-01 - 2026-03-10
+
+# AGGIUNGI LE TUE PRENOTAZIONI ATTUALI QUI SOTTO:
+2026-02-15 - 2026-12-01
