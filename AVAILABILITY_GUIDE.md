@@ -112,4 +112,4 @@ Il calendario mostra:
 
 ---
 
-Per qualsiasi domanda, contatta ottavio.barone@protonmail.com
+Per qualsiasi domanda, contatta marybluesdream@gmail.com

@@ -94,7 +94,7 @@ I colori possono essere modificati nel file `assets/css/style.css` nella sezione
 ### Testo
 Modifica il numero di telefono e l'email in tutte le pagine cercando:
 - Telefono: `3405444276`
-- Email: `ottavio.barone@protonmail.com`
+- Email: `marybluesdream@gmail.com`
 
 ## 📱 Responsive Breakpoints
 
@@ -120,7 +120,7 @@ Modifica il numero di telefono e l'email in tutte le pagine cercando:
 
 Per qualsiasi informazione sulla villa:
 - **Telefono**: 3405444276
-- **Email**: ottavio.barone@protonmail.com
+- **Email**: marybluesdream@gmail.com
 
 ---
 
