@@ -131,8 +131,8 @@ main {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, rgba(44, 90, 160, 0.9) 0%, rgba(30, 63, 127, 0.9) 100%), 
-              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><pattern id="dots" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="%23fff" opacity="0.1"/></pattern></defs><rect width="1200" height="600" fill="url(%23dots)"/></svg>');
+  background: linear-gradient(135deg, rgba(44, 90, 160, 0.7) 0%, rgba(30, 63, 127, 0.7) 100%), 
+              url('../images/BannerGiardino.jpg') center/cover;
   background-attachment: fixed;
   color: white;
   padding: 4rem 20px;
