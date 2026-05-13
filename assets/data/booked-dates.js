@@ -3,5 +3,5 @@
 // Modifica questa stringa secondo le tue prenotazioni
 
 const bookedDatesString = `
-
+2026-05-17 - 2026-05-18
 `;

@@ -2,19 +2,22 @@
 
 ## 📋 Come Configurare i Periodi Occupati
 
-Il file `assets/data/availability.txt` contiene l'elenco dei periodi in cui la villa non è disponibile per le prenotazioni.
+Il file `assets/data/booked-dates.js` contiene l'elenco dei periodi in cui la villa non è disponibile per le prenotazioni.
 
 ### 📝 Formato del File
 
-Ogni riga deve contenere un periodo occupato nel seguente formato:
+Il file contiene una variabile `bookedDatesString` con i periodi occupati nel seguente formato:
 ```
+AAAA-MM-GG - AAAA-MM-GG
 AAAA-MM-GG - AAAA-MM-GG
 ```
 
 **Esempio:**
-```
+```javascript
+const bookedDatesString = `
 2026-02-15 - 2026-02-20
 2026-03-01 - 2026-03-10
+`;
 ```
 
 Questo significa:
@@ -24,40 +27,45 @@ Questo significa:
 
 ### ✏️ Come Modificare il File
 
-1. Apri il file `assets/data/availability.txt` con qualsiasi editor di testo (Notepad, Word, etc.)
-2. Aggiungi i periodi occupati nel formato sopra
-3. Una riga per ogni periodo
+1. Apri il file `assets/data/booked-dates.js` con un editor di testo (VS Code, Notepad, etc.)
+2. Trovate la riga con `const bookedDatesString = ` ``;` 
+3. Aggiungi i periodi occupati dentro i backtick, uno per riga
 4. Salva il file
+5. Aggiorna la pagina "Disponibilità" nel browser (premi F5)
 
 ### 📌 Regole Importanti
 
 - **Separatore:** Usa il trattino "-" per separare le date (con spazi prima e dopo)
 - **Formato data:** Sempre `AAAA-MM-GG` (es: 2026-02-15, non 15-02-2026)
-- **Commenti:** Le righe che iniziano con `#` sono commenti e vengono ignorate
+- **Commenti:** NON usare commenti JavaScript dentro la stringa
 - **Righe vuote:** Vanno bene, vengono ignorate
 - **Ordine:** L'ordine dei periodi non importa
 
 ### ✅ Esempi Validi
 
-```
+```javascript
+const bookedDatesString = `
 2026-02-15 - 2026-02-20
 2026-03-01 - 2026-03-10
 2026-07-01 - 2026-08-31
 2026-12-20 - 2026-12-27
+`;
 ```
 
 ### ❌ Esempi Non Validi (NON usare questi formati)
 
-```
+```javascript
+const bookedDatesString = `
 15-02-2026 - 20-02-2026    ❌ (ordine data sbagliato)
 2026/02/15 - 2026/02/20    ❌ (separatore sbagliato)
 2026-2-15 - 2026-2-20      ❌ (mesi e giorni senza zero)
-15 febbraio - 20 febbraio  ❌ (formato testo)
+// 2026-02-15 - 2026-02-20 ❌ (commenti JavaScript NON vanno)
+`;
 ```
 
 ### 🔄 Aggiornamento Calendario
 
-Dopo aver modificato il file `availability.txt`:
+Dopo aver modificato il file `booked-dates.js`:
 1. Salva il file
 2. Aggiorna la pagina "Disponibilità" nel browser (premi F5)
 3. Il calendario si aggiornerà automaticamente
@@ -72,30 +80,24 @@ Il calendario mostra:
 
 ### 🎯 Suggerimenti
 
-1. **Temp minimala:** Potresti stabilire una durata minima di soggiorno (es: minimo 3 notti)
+1. **Durata minima:** Potresti stabilire una durata minima di soggiorno (es: minimo 3 notti)
 2. **Giorni di pulizia:** Se hai giorni di pulizia tra una prenotazione e l'altra, includili nei periodi occupati
 3. **Manutenzione:** Puoi anche marcare i periodi di manutenzione come occupati
 4. **Aggiornamenti frequenti:** Aggiorna il file appena ricevi una nuova prenotazione
 
 ### 💡 Esempio Completo di File
 
-```
-# Prenotazioni confermate per 2026
+```javascript
+// File di configurazione periodi occupati per il calendario
+// Formato: "AAAA-MM-GG - AAAA-MM-GG" (una riga per periodo)
 
-# Febbraio
+const bookedDatesString = `
 2026-02-15 - 2026-02-20
-
-# Marzo
 2026-03-01 - 2026-03-10
-
-# Aprile
 2026-04-05 - 2026-04-12
-
-# Estate
 2026-07-01 - 2026-08-31
-
-# Natale
 2026-12-20 - 2026-12-27
+`;
 ```
 
 ### ⚠️ Risoluzione Problemi
